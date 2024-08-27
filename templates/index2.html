@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaceMate</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles2.css') }}">
+</head>
+
+<body>
+
+    <!-- Background Canvas for Neural Network Animation -->
+    <canvas id="backgroundCanvas"></canvas>
+
+    <!-- Header and Introduction Section -->
+    <header class="header-section">
+        <div class="header-container">
+            <h1>Welcome to FaceMate</h1>
+            <p>FaceMate is an intelligent facial recognition tool that helps you identify individuals from images with cutting-edge machine learning algorithms.</p>
+        </div>
+    </header>
+
+    <!-- Upload Form Section -->
+    <div class="container">
+        <div class="upload-card">
+            <form class="upload-form" id="uploadForm" method="POST" enctype="multipart/form-data">
+                <input type="file" name="file" accept="image/*" required>
+                <br>
+                <button type="submit">Let's Identify</button>
+            </form>
+
+            <!-- Prediction Result Container -->
+            <div class="result" id="result">
+                <!-- This is where the prediction result will appear -->
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script2.js') }}"></script>
+
+</body>
+
+</html>
